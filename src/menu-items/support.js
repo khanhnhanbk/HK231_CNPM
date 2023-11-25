@@ -1,10 +1,11 @@
 // assets
-import { ChromeOutlined, QuestionOutlined } from '@ant-design/icons';
+import { ChromeOutlined, QuestionOutlined, MessageOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
   ChromeOutlined,
-  QuestionOutlined
+  QuestionOutlined,
+  MessageOutlined
 };
 
 // ==============================|| MENU ITEMS - SAMPLE PAGE & DOCUMENTATION ||============================== //
@@ -15,21 +16,21 @@ const support = {
   type: 'group',
   children: [
     {
-      id: 'sample-page',
-      title: 'Sample Page',
+      id: 'contact',
+      title: 'Contact SPSO',
       type: 'item',
       url: '/sample-page',
-      icon: icons.ChromeOutlined
+      icon: icons.MessageOutlined
     },
-    {
-      id: 'documentation',
-      title: 'Documentation',
-      type: 'item',
-      url: 'https://codedthemes.gitbook.io/mantis/',
-      icon: icons.QuestionOutlined,
-      external: true,
-      target: true
-    }
+    // {
+    //   id: 'documentation',
+    //   title: 'Documentation',
+    //   type: 'item',
+    //   url: 'https://codedthemes.gitbook.io/mantis/',
+    //   icon: icons.QuestionOutlined,
+    //   external: true,
+    //   target: true
+    // }
   ]
 };
 

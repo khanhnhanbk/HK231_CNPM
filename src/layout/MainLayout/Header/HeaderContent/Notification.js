@@ -17,7 +17,8 @@ import {
   Paper,
   Popper,
   Typography,
-  useMediaQuery
+  useMediaQuery,
+  
 } from '@mui/material';
 
 // project import
@@ -25,7 +26,7 @@ import MainCard from 'components/MainCard';
 import Transitions from 'components/@extended/Transitions';
 
 // assets
-import { BellOutlined, CloseOutlined, GiftOutlined, MessageOutlined, SettingOutlined } from '@ant-design/icons';
+import { BellOutlined, CloseOutlined, MessageOutlined,FileProtectOutlined, DollarOutlined } from '@ant-design/icons';
 
 // sx styles
 const avatarSX = {
@@ -144,24 +145,24 @@ const Notification = () => {
                             bgcolor: 'success.lighter'
                           }}
                         >
-                          <GiftOutlined />
+                          <FileProtectOutlined />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText
                         primary={
                           <Typography variant="h6">
-                            It&apos;s{' '}
-                            <Typography component="span" variant="subtitle1">
-                              Cristina danny&apos;s
+                             Request:
+                            <Typography component="span" variant="subtitle1">{' '}
+                              Baitap-HCSDL.pdf
                             </Typography>{' '}
-                            birthday today.
+                            is done.
                           </Typography>
                         }
                         secondary="2 min ago"
                       />
                       <ListItemSecondaryAction>
                         <Typography variant="caption" noWrap>
-                          3:00 AM
+                          9:00 AM
                         </Typography>
                       </ListItemSecondaryAction>
                     </ListItemButton>
@@ -181,12 +182,12 @@ const Notification = () => {
                         primary={
                           <Typography variant="h6">
                             <Typography component="span" variant="subtitle1">
-                              Aida Burg
+                              SPSO
                             </Typography>{' '}
-                            commented your post.
+                            replied.
                           </Typography>
                         }
-                        secondary="5 August"
+                        secondary="5 December 2023"
                       />
                       <ListItemSecondaryAction>
                         <Typography variant="caption" noWrap>
@@ -199,19 +200,19 @@ const Notification = () => {
                       <ListItemAvatar>
                         <Avatar
                           sx={{
-                            color: 'error.main',
-                            bgcolor: 'error.lighter'
+                            color: 'success.main',
+                            bgcolor: 'success.lighter'
                           }}
                         >
-                          <SettingOutlined />
+                          <DollarOutlined />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText
                         primary={
                           <Typography variant="h6">
-                            Your Profile is Complete &nbsp;
+                            Successfully purchased, your balance is &nbsp;
                             <Typography component="span" variant="subtitle1">
-                              60%
+                              60.000 VND
                             </Typography>{' '}
                           </Typography>
                         }
@@ -224,37 +225,7 @@ const Notification = () => {
                       </ListItemSecondaryAction>
                     </ListItemButton>
                     <Divider />
-                    <ListItemButton>
-                      <ListItemAvatar>
-                        <Avatar
-                          sx={{
-                            color: 'primary.main',
-                            bgcolor: 'primary.lighter'
-                          }}
-                        >
-                          C
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant="h6">
-                            <Typography component="span" variant="subtitle1">
-                              Cristina Danny
-                            </Typography>{' '}
-                            invited to join{' '}
-                            <Typography component="span" variant="subtitle1">
-                              Meeting.
-                            </Typography>
-                          </Typography>
-                        }
-                        secondary="Daily scrum meeting time"
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant="caption" noWrap>
-                          9:10 PM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
+                    
                     <Divider />
                     <ListItemButton sx={{ textAlign: 'center', py: `${12}px !important` }}>
                       <ListItemText

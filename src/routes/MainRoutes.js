@@ -9,7 +9,7 @@ const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
 
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/SamplePage')));
-
+const LandingPage = Loadable(lazy(() => import('pages/extra-pages/LandingPage')));
 // render - utilities
 const Typography = Loadable(lazy(() => import('pages/components-overview/Typography')));
 const Color = Loadable(lazy(() => import('pages/components-overview/Color')));
@@ -17,7 +17,7 @@ const Shadow = Loadable(lazy(() => import('pages/components-overview/Shadow')));
 const AntIcons = Loadable(lazy(() => import('pages/components-overview/AntIcons')));
 
 // ==============================|| MAIN ROUTING ||============================== //
-
+/* <MainRoutes/> is the main layout routing you see after login. */
 const MainRoutes = {
   path: '/',
   element: <MainLayout />,
@@ -42,6 +42,10 @@ const MainRoutes = {
     {
       path: 'sample-page',
       element: <SamplePage />
+    },
+    {
+      path: 'landing-page',
+      element: <LandingPage />
     },
     {
       path: 'shadow',
