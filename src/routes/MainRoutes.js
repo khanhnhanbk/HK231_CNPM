@@ -17,7 +17,7 @@ const Shadow = Loadable(lazy(() => import('pages/components-overview/Shadow')));
 const AntIcons = Loadable(lazy(() => import('pages/components-overview/AntIcons')));
 
 // ==============================|| MAIN ROUTING ||============================== //
-
+/* <MainRoutes/> is the main layout routing you see after login. */
 const MainRoutes = {
   path: '/',
   element: <MainLayout />,

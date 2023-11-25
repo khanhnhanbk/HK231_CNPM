@@ -112,7 +112,7 @@ const LandingPage = () => (
               color: 'white',
               width: '150px',
               
-            }} variant="contained" href="#">
+            }} variant="contained" href="/login">
               Bắt đầu </Button>
     </Box>
     
