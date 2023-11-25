@@ -78,7 +78,7 @@ const utilities = {
     },
     {
       id: 'purchase',
-      title: 'purchase',
+      title: 'Purchase',
       type: 'item',
       url: '/icons/ant',
       icon: icons.DollarOutlined,
