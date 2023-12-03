@@ -32,39 +32,18 @@ const utilities = {
   type: 'group',
   children: [
     // {
-    //   id: 'util-typography',
-    //   title: 'Typography',
-    //   type: 'item',
-    //   url: '/typography',
-    //   icon: icons.FontSizeOutlined
-    // },
-    // {
-    //   id: 'util-color',
-    //   title: 'Color',
-    //   type: 'item',
-    //   url: '/color',
-    //   icon: icons.BgColorsOutlined
-    // },
-    // {
-    //   id: 'util-shadow',
-    //   title: 'Shadow',
-    //   type: 'item',
-    //   url: '/shadow',
-    //   icon: icons.BarcodeOutlined
-    // },
-    // {
-    //   id: 'ant-icons',
-    //   title: 'Ant Icons',
+    //   id: 'icon',
+    //   title: 'Icon',
     //   type: 'item',
     //   url: '/icons/ant',
-    //   icon: icons.AntDesignOutlined,
+    //   icon: icons.HomeOutlined,
     //   breadcrumbs: false
-    // }
+    // },
     {
       id: 'homepage',
       title: 'Home Page',
       type: 'item',
-      url: '/icons/ant',
+      url: '/homepage',
       icon: icons.HomeOutlined,
       breadcrumbs: false
     },
@@ -72,7 +51,7 @@ const utilities = {
       id: 'upload',
       title: 'Upload',
       type: 'item',
-      url: '/icons/ant',
+      url: '/upload',
       icon: icons.UploadOutlined,
       breadcrumbs: false
     },
@@ -80,7 +59,7 @@ const utilities = {
       id: 'purchase',
       title: 'Purchase',
       type: 'item',
-      url: '/icons/ant',
+      url: '/purchase',
       icon: icons.DollarOutlined,
       breadcrumbs: false
     },
