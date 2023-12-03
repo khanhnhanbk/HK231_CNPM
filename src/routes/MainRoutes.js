@@ -7,9 +7,12 @@ import MainLayout from 'layout/MainLayout';
 // render - dashboard
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
 
-// render - sample page
+// render - sample page - currently work
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/SamplePage')));
 const LandingPage = Loadable(lazy(() => import('pages/extra-pages/LandingPage')));
+const HomePage = Loadable(lazy(() => import('pages/extra-pages/HomePage')));
+const UploadPage = Loadable(lazy(() => import('pages/extra-pages/UploadPage')));
+const PurchasePage = Loadable(lazy(() => import('pages/extra-pages/PurchasePage')));
 // render - utilities
 const Typography = Loadable(lazy(() => import('pages/components-overview/Typography')));
 const Color = Loadable(lazy(() => import('pages/components-overview/Color')));
@@ -29,6 +32,10 @@ const MainRoutes = {
     {
       path: 'color',
       element: <Color />
+    },
+    {
+      path: 'icons/ant',
+      element: <AntIcons />
     },
     {
       path: 'dashboard',
@@ -56,9 +63,17 @@ const MainRoutes = {
       element: <Typography />
     },
     {
-      path: 'icons/ant',
-      element: <AntIcons />
-    }
+      path: 'homepage',
+      element: <HomePage />
+    },
+    {
+      path: 'upload',
+      element: <UploadPage />
+    },
+    {
+      path: 'purchase',
+      element: <PurchasePage />
+    },
   ]
 };
 
