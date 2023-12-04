@@ -1,21 +1,20 @@
 import { lazy } from 'react';
 
-// project import
 import Loadable from 'components/Loadable';
 import MainLayout from 'layout/MainLayout';
 
-const LandingPage = Loadable(lazy(() => import('pages/extra-pages/LandingPage')));
+const HomePage = Loadable(lazy(() => import('pages/extra-pages/SPSOHomePage')));
 
-const MainRoutes = {
+const SPSORoutes = {
   path: '/',
   element: <MainLayout />,
   children: [
     {
       path: '/',
-      element: <LandingPage />
+      element: <HomePage />
     },
 
   ]
 };
 
-export default MainRoutes;
+export default SPSORoutes;

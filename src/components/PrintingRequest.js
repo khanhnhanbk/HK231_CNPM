@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { 
+import {
   // IconButton, 
-  Card, Box } from '@mui/material';
+  Card, Box
+} from '@mui/material';
 
 
 
 
-const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint,RequestID  }) => {
+const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint, RequestID }) => {
   const [currentStatus, setCurrentStatus] = useState(Status);
-  let timeinterval = TimePrint? TimePrint*1000:5000;
+  let timeinterval = TimePrint ? TimePrint * 1000 : 5000;
   console.log(TimePrint)
   console.log(timeinterval)
   useEffect(() => {
@@ -17,17 +18,17 @@ const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint,RequestID
       if (currentStatus === 'pending') {
         setTimeout(() => {
           setCurrentStatus('printed');
-          const {updateStatus} = require('../controller/printRequest.controller');
+          const { updateStatus } = require('../controller/printRequest.controller');
           updateStatus(RequestID, 'printed');
-          
-        },timeinterval ); // Change the status after 5 seconds
-      } else if (currentStatus === 'printed' && Status ==='pending') { // from pending to printed Status
-        
+
+        }, timeinterval); // Change the status after 5 seconds
+      } else if (currentStatus === 'printed' && Status === 'pending') { // from pending to printed Status
+
         try {
-          const {subtractCostFromBalance } = require('../controller/balance.controller')
+          const { subtractCostFromBalance } = require('../controller/balance.controller')
           const response = await subtractCostFromBalance(Cost);
-          
-          
+
+
           // Handle the response or perform necessary actions
           console.log('Cost subtracted:', response);
         } catch (error) {
@@ -42,7 +43,7 @@ const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint,RequestID
 
   return (
     <>
-    
+
 
       <Card
         sx={{
@@ -55,7 +56,7 @@ const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint,RequestID
           // shadow: 'none',
         }}
       >
-        <Box sx = {{
+        <Box sx={{
           display: 'flex',
         }}>
           <Box>
@@ -65,7 +66,7 @@ const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint,RequestID
               style={{ height: '50px' }}
             ></img>
           </Box>
-          <Box sx = {{
+          <Box sx={{
             display: 'flex',
             flexDirection: 'column',
             // justifyContent: 'space-between'
@@ -75,12 +76,12 @@ const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint,RequestID
           </Box>
         </Box>
 
-        <Box  mx="16px">
-          <Box sx = {{typography: 'body1'}}>
+        <Box mx="16px">
+          <Box sx={{ typography: 'body1' }}>
             Status: {' '}
-            <span style={{ color: currentStatus === 'pending' ? 'blue' : 'green' , }}>{currentStatus}</span>
+            <span style={{ color: currentStatus === 'pending' ? 'blue' : 'green', }}>{currentStatus}</span>
           </Box>
-          <Box sx = {{typography: 'body2'}}>
+          <Box sx={{ typography: 'body2' }}>
             Cost: {' '} <span> {Cost}.000VND</span>
           </Box>
         </Box>
