@@ -1,59 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import {
-  // IconButton, 
-  Card, Box
+  Card, Box, Button
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
-const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint, RequestID }) => {
-  const [currentStatus, setCurrentStatus] = useState(Status);
-  let timeinterval = TimePrint ? TimePrint * 1000 : 5000;
-  console.log(TimePrint)
-  console.log(timeinterval)
-  useEffect(() => {
-    const handleStatusChange = async () => {
-      if (currentStatus === 'pending') {
-        setTimeout(() => {
-          setCurrentStatus('printed');
-          const { updateStatus } = require('../controller/printRequest.controller');
-          updateStatus(RequestID, 'printed');
-
-        }, timeinterval); // Change the status after 5 seconds
-      } else if (currentStatus === 'printed' && Status === 'pending') { // from pending to printed Status
-
-        try {
-          const { subtractCostFromBalance } = require('../controller/balance.controller')
-          const response = await subtractCostFromBalance(Cost);
-
-
-          // Handle the response or perform necessary actions
-          console.log('Cost subtracted:', response);
-        } catch (error) {
-          console.error('Error subtracting cost:', error);
-        }
-      }
-    };
-
-    handleStatusChange();
-  }, [currentStatus, Cost, timeinterval]);
-
-
+const PrintingRequest = ({ request }) => {
+  const { requestID, filename, status, sentTime, cost } = request;
+  const navigate = useNavigate();
   return (
     <>
 
 
       <Card
         sx={{
-          width: '50%',
           minHeight: '56px',
           padding: '8px',
           my: '8px',
           display: 'flex',
           justifyContent: 'space-between',
-          // shadow: 'none',
         }}
       >
         <Box sx={{
@@ -71,32 +38,35 @@ const PrintingRequest = ({ Filename, Status, SentTime, Cost, TimePrint, RequestI
             flexDirection: 'column',
             // justifyContent: 'space-between'
           }}>
-            <Box sx={{ fontWeight: 'medium' }}>{Filename}</Box>
-            <Box sx={{ typography: 'body2' }}>Sent time: {SentTime}</Box>
+            <Box sx={{ fontWeight: 'medium' }}>{filename}</Box>
+            <Box sx={{ typography: 'body2' }}>Sent time: {sentTime}</Box>
           </Box>
         </Box>
 
         <Box mx="16px">
           <Box sx={{ typography: 'body1' }}>
             Status: {' '}
-            <span style={{ color: currentStatus === 'pending' ? 'blue' : 'green', }}>{currentStatus}</span>
+            <span style={{ color: status === 'pending' ? 'blue' : 'green', }}>{status}</span>
           </Box>
           <Box sx={{ typography: 'body2' }}>
-            Cost: {' '} <span> {Cost}.000VND</span>
+            Cost: <span> {cost}.000VND</span>
           </Box>
         </Box>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Button variant="contained" sx={{ mr: '8px' }}
+            onClick={() => { navigate(`/request/${requestID}/config`) }}
+          >Config</Button>
+          <Button variant="contained" color="secondary"
+            onClick={() => { navigate(`/request/${requestID}`) }}
+          >Detail</Button>
+
+        </Box>
+
       </Card>
     </>
   );
 };
 
-PrintingRequest.propTypes = {
-  Filename: PropTypes.string.isRequired,
-  Status: PropTypes.string.isRequired,
-  SentTime: PropTypes.string,
-  Cost: PropTypes.number.isRequired,
-  TimePrint: PropTypes.number,
-  RequestID: PropTypes.number.require,
-};
+
 
 export default PrintingRequest;

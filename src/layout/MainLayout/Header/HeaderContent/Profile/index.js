@@ -57,7 +57,8 @@ const Profile = () => {
   const theme = useTheme();
 
   const handleLogout = async () => {
-    // logout
+    localStorage.clear();
+    window.location.href = '/login';
   };
 
   const anchorRef = useRef(null);
