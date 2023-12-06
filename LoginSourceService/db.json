@@ -1,0 +1,7 @@
+{
+    "users": [
+      {  "role": "student", "email": "student@gmail.com", "password": "studentpass" },
+      {  "role": "spso", "email": "spso@gmail.com", "password": "spsopass" }
+    ]
+  }
+  

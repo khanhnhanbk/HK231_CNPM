@@ -14,3 +14,10 @@ yarn start
 [Mantis documentation](https://codedthemes.gitbook.io/mantis/) helps you out in all aspects from Installation to deployment.
 
 change default page at config.js
+
+## Run Json Server
+
+
+```
+json-server --warch db.json --port 3000
+```

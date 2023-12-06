@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav>
+        <img src="images/logo.png" alt="Logo" />
+        <div class="nav">
+            <div class="nav-home">
+                <a href="#">HOME</a>
+                <div class="line"></div>
+            </div>
+            <div class="nav-upload">
+                <a href="#">UPLOAD</a>
+            </div>
+            <div class="nav-log">
+                <a href="#">LOG</a>
+            </div>
+            <div class="nav-purchase">
+                <a href="#">PURCHASE</a>
+            </div>
+            <button>LOGIN</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <div class="content-nof">
+                <img src="images/a 1.png" alt="a1" />
+                <div>
+                    <h3>THÔNG TIN HỖ TRỢ</h3>
+                    <p>
+                        Mọi thắc mắc về việc sử dụng hệ thống in xin vui lòng liên hệ ....
+                    </p>
+                </div>
+            </div>
+            <div class="content-nof">
+                <img src="images/b 1.png" alt="a1" />
+                <div>
+                    <h3>Hướng dẫn sử dụng</h3>
+                    <p>Bao gồm tất cả video, tài liệu hướng dẫn sử dụng hệ thống in</p>
+                </div>
+            </div>
+            <div class="content-nof">
+                <img src="images/c 1.png" alt="a1" />
+                <div>
+                    <h3>KHẢO SÁT SỬ DỤNG HỆ THỐNG IN</h3>
+                    <p>Khảo sát sử dụng hệ thống in đợt 3 từ 12/11/2023 - 19/11/2023</p>
+                </div>
+            </div>
+
+            <div class="content-nof">
+                <img src="images/d 1.png" alt="a1" />
+                <div>
+                    <h3>HÔNG BÁO CẬP NHẬT HỆ THỐNG</h3>
+                    <p>Hiện tại chưa có thông tin về việc cập nhật hệ thống</p>
+                </div>
+            </div>
+        </div>
+        <div class="auth">
+            <div class="login">
+                <img src="images/hcmut.png" alt="logo" />
+                <div class="choose-role">
+                    <button id="student" onclick="showLoginForm('student')">
+                        Cán bộ/ Sinh viên trường ĐH Bách Khoa Tp.HCM
+                    </button>
+                    <button id="spso" onclick="showLoginForm('spso')">
+                        Quản trị hệ thống
+                    </button>
+                </div>
+                <div class="form-login active" id="loginForm">
+                    <!-- Login form content -->
+                    <form>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required />
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required />
+                        <div class="btn">
+                            <button type="button" onclick="showLoginButtons()">Back</button>
+                            <button type="button" onclick="checkLogin()">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var role_user;
+    
+        function loginUser(email, password) {
+            const endpoint = "http://localhost:3000/users"; // JSON Server endpoint for users
+            const data = {
+                role: role_user,
+                email: email,
+                password: password,
+            };
+    
+            fetch(endpoint, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error("Failed to fetch user data.");
+                    }
+                })
+                .then((users) => {
+                    const user = users.find(u => u.role === role_user && u.email === email && u.password === password);
+    
+                    if (user) {
+                        alert(`Login successful as ${user.role}`);
+                    } else {
+                        throw new Error("Invalid credentials");
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error:", error.message);
+                    alert(error.message); // Display the specific error message
+                });
+        }
+    
+        var loginButtons = document.querySelector(".choose-role");
+        var loginForm = document.getElementById("loginForm");
+    
+        function showLoginForm(role) {
+            role_user = role;
+            console.log(role_user);
+    
+            // Toggle visibility of login form and login buttons
+            loginForm.classList.add("active");
+            loginButtons.classList.remove("active");
+        }
+    
+        function showLoginButtons() {
+            loginForm.classList.remove("active");
+            loginButtons.classList.add("active");
+        }
+    
+        function checkLogin() {
+            const emailInput = document.getElementById("username").value;
+            const passwordInput = document.getElementById("password").value;
+    
+            loginUser(emailInput, passwordInput);
+        }
+    </script>
+    
+    
+</body>
+
+</html>
