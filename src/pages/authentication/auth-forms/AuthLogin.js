@@ -45,7 +45,7 @@ const AuthLogin = () => {
     <>
       <Formik
         initialValues={{
-          email: 'info@codedthemes.com',
+          email: 'student@hcmut.com',
           password: '123456',
           submit: null
         }}
@@ -158,7 +158,7 @@ const AuthLogin = () => {
                         localStorage.setItem('token', '123456');
                         localStorage.setItem('role', 'spso');
                       }
-                      else if (values.email === "student@gmail.com") {
+                      else if (values.email === "student@gmail.com" || values.email === "student@hcmut.com") {
                         localStorage.setItem('token', '123456');
                         localStorage.setItem('role', 'student');
                       }
