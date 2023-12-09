@@ -1,27 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from '@mui/material';
 import MainCard from 'components/MainCard';
-import PrintingRequest from 'components/PrintingRequest';
+import PrintingSPSORequest from 'components/PrintingSPSORequest';
 import { samplePrintingRequests } from '../../model/samplePrintRequest';
-import { updateStatus } from '../../controller/printRequest.controller';
 
 const HomePage = () => {
+
   const renderPrintingRequests = () => {
     return samplePrintingRequests.map((request, index) => (
-      <PrintingRequest
+      <PrintingSPSORequest
         key={index}
-        Filename={request.filename}
-        SentTime={request.sentTime}
-        Status={request.status}
-        Cost={request.cost}
-        RequestID={index}
-        updateRequestStatus={(newStatus) => updateStatus(index, newStatus)}
+        request={{ ...request }}
       />
     ));
   };
+  useEffect(() => {
+
+  }, []);
 
   return (
-    <MainCard title="This is SPSO Home Page">
+    <MainCard title="Home Page">
       <Box sx={{
         marginBottom: '16px',
         fontSize: '1.5rem',
