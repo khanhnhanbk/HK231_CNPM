@@ -4,6 +4,7 @@ import MainRoutes from './MainRoutes';
 import LoginRoutes from './LoginRoutes';
 import StudentRoutes from './StudentRoutes';
 import SPSORoutes from './SPSORoutes';
+import BeforeLoginRoutes from './BeforeLoginRoutes';
 
 export default function ThemeRoutes() {
   const token = localStorage.getItem('token');
@@ -18,7 +19,7 @@ export default function ThemeRoutes() {
     }
   }
   else {
-    router = [MainRoutes, LoginRoutes]
+    router = [BeforeLoginRoutes, LoginRoutes]
   }
   return useRoutes(router);
 }
