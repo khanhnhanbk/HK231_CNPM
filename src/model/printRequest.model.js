@@ -5,6 +5,7 @@ class PrintingRequest {
     this.status = status;
     this.sentTime = sentTime || new Date().toLocaleString();
     this.cost = cost;
+    this.studentName = 'Nguyen Van A';
     this.prototype = new PrintPrototype();
   }
 }
