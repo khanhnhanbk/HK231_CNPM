@@ -5,7 +5,16 @@ import { addRequest } from '../../controller/printRequest.controller';
 import { useState } from 'react'
 import PrintingRequest from '../../model/printRequest.model'
 
-const fileTypes = ["doc", "docx", "pdf", "jpg", "jpeg", "png", "txt", "rtf", "xls", "xlsx", "ppt", "pptx", "gif", "bmp", "tif", "tiff", "csv", "zip", "rar", "7z", "gz", "tar", "mp3", "mp4", "mov", "avi", "mkv", "wav", "flac", "ogg", "wma", "aiff", "aac", "psd", "ai", "svg", "eps", "ps", "ttf", "otf", "woff", "woff2", "eot", "xps", "ps", "odt", "ods", "odp", "odg", "odf", "txt", "rtf", "html", "htm", "xhtml", "css", "js", "jsx", "c", "cpp", "h", "hpp", "java", "class", "cs", "vb", "py", "php", "asp", "aspx", "jsp", "xml", "json", "sh", "swift", "go", "rb", "sql", "r", "rmd", "yaml", "yml", "toml", "ini", "cfg", "reg", "conf", "vb", "vbs", "lua", "pl", "ps1", "bat", "cmd", "url", "desktop", "lnk", "md", "markdown", "tex", "log",];
+const fileTypes = ["doc", "docx", "pdf", "jpg", "jpeg", "png", "txt",
+ "rtf", "xls", "xlsx", "ppt", "pptx", "gif", "bmp", "tif", "tiff", "csv",
+  "zip", "rar", "7z", "gz", "tar", "mp3", "mp4", "mov", "avi", "mkv", "wav",
+   "flac", "ogg", "wma", "aiff", "aac", "psd", "ai", "svg", "eps", "ps", "ttf",
+    "otf", "woff", "woff2", "eot", "xps", "ps", "odt", "ods", "odp", "odg", "odf",
+     "txt", "rtf", "htm", "xhtml", "css", "js", "jsx", "c", "cpp", "h", "hpp",
+      "java", "class", "cs", "vb", "py", "php", "asp", "aspx", "jsp", "xml", "json", "sh",
+       "swift", "go", "rb", "sql", "r", "rmd", "yaml", "yml", "toml", "ini", "cfg", "reg",
+        "conf", "vb", "vbs", "lua", "pl", "ps1", "bat", "cmd", "url", "desktop", "lnk", "md",
+         "markdown", "tex", "log",];
 
 const UploadPage = () => {
   const [files, setFiles] = useState(null);
