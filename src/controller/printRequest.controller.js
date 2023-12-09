@@ -1,8 +1,12 @@
 import { samplePrintingRequests } from '../model/samplePrintRequest'
 
 const updateStatus = async (id = 0, newStatus) => {
-  samplePrintingRequests[id].Status = newStatus ? newStatus : 'printed';
-  console.log(samplePrintingRequests[id])
+  // Update the status in the samplePrintingRequests array
+  samplePrintingRequests.forEach((request) => {
+    if (request.requestID === id) {
+      request.status = newStatus;
+    }
+  });
 };
 updateStatus();
 
