@@ -1,0 +1,73 @@
+commit 0b62f8712ba8b44cd4b63d522fdba8a6f8170432
+Merge: 6f877d0 8daaa7c
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Wed Dec 6 21:12:59 2023 +0700
+
+    Merge branch 'DuqBE' of https://github.com/khanhnhanbk/HK231_CNPM into DuqBE
+
+commit 8daaa7cf08589c6b4d785c3aeab878705e732c96
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Wed Dec 6 16:51:35 2023 +0700
+
+    edit and detail page
+
+commit 6f877d03c51cca6e74bcd59b54a00c04743285fd
+Merge: f15b9cd ab42ebc
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Mon Dec 4 16:46:27 2023 +0700
+
+    Merge branch 'DuqBE' of https://github.com/khanhnhanbk/HK231_CNPM into DuqBE
+
+commit f15b9cdc369f6598259c5b23b41dc4478eecd574
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Mon Dec 4 16:46:21 2023 +0700
+
+    add react- drag file
+
+commit ab42ebc63c79970370e03d439a7eb5a0add0a2f4
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Mon Dec 4 16:36:23 2023 +0700
+
+    Add SPSO menu item and routes
+
+commit 35963a7a36b8dabda2b92da3ca5c9273c97f52fe
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Mon Dec 4 15:42:26 2023 +0700
+
+    upload file
+
+commit 451183f6a8591ddfad37f612d078dfae7e22b989
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Sun Dec 3 22:23:14 2023 +0700
+
+    page for requests
+
+commit 864614fb955046bfffd6645d209e22bbb0556f91
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Wed Nov 29 09:00:53 2023 +0700
+
+    add balance
+
+commit 995704370f64b708fbc2c61c3af5da25705b62c2
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Sat Nov 25 10:56:49 2023 +0700
+
+    adjust header in notifications
+
+commit 793fca164dd236d396c67e5c86f4245a7c97d281
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Sat Nov 25 10:08:10 2023 +0700
+
+    adjust the drawer aka sider
+
+commit 0207db8f596c4702385784b6055880e66e5ee03a
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Fri Nov 24 16:39:30 2023 +0700
+
+    create landing page UI
+
+commit b28f0c847e9a205939096b46097cecabf0ea5731
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Fri Nov 17 21:30:33 2023 +0700
+
+    init commit

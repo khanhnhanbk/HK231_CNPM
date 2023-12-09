@@ -79,7 +79,7 @@ const Notification = () => {
         aria-haspopup="true"
         onClick={handleToggle}
       >
-        <Badge badgeContent={4} color="primary">
+        <Badge badgeContent={3} color="primary">
           <BellOutlined />
         </Badge>
       </IconButton>

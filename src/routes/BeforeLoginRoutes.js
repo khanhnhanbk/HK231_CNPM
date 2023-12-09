@@ -2,13 +2,13 @@ import { lazy } from 'react';
 
 // project import
 import Loadable from 'components/Loadable';
-import MainLayout from 'layout/MainLayout';
+import SimpleLayout from 'layout/SimpleLayout';
 
 const LandingPage = Loadable(lazy(() => import('pages/extra-pages/LandingPage')));
 
-const MainRoutes = {
+const BeforeLoginRoutes = {
   path: '/',
-  element: <MainLayout />,
+  element: <SimpleLayout />,
   children: [
     {
       path: '/',
@@ -18,4 +18,4 @@ const MainRoutes = {
   ]
 };
 
-export default MainRoutes;
+export default BeforeLoginRoutes;

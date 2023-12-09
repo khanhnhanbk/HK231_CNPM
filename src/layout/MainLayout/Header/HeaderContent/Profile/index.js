@@ -57,7 +57,8 @@ const Profile = () => {
   const theme = useTheme();
 
   const handleLogout = async () => {
-    // logout
+    localStorage.clear();
+    window.location.href = '/login';
   };
 
   const anchorRef = useRef(null);
@@ -141,7 +142,7 @@ const Profile = () => {
                           <Stack direction="row" spacing={1.25} alignItems="center">
                             <Avatar alt="profile user" src={avatar1} sx={{ width: 32, height: 32 }} />
                             <Stack>
-                              <Typography variant="h6">John Doe</Typography>
+                              <Typography variant="h6">Nguyễn Văn A</Typography>
                               <Typography variant="body2" color="textSecondary">
                                 2110101
                               </Typography>
