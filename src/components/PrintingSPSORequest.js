@@ -69,6 +69,14 @@ const PrintingSPSORequest = ({ request }) => {
           >Next</Button>
         </Box>
 
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Button variant={status === ("printed" || "canceled") ? 'disable' : "contained"} sx={{ mr: '8px' }}
+            onClick={() => {
+              updateStatus(requestID, 'canceled');
+            }}
+          >Cancel</Button>
+        </Box>
+
       </Card>
     </>
   );

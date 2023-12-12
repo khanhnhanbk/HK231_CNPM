@@ -1,3 +1,114 @@
+commit f993af11df178cbdb6d55c39cfda8f0835378862
+Merge: 9cab41b 4b0647e
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Sat Dec 9 09:13:37 2023 +0700
+
+    Merge branch 'main' of https://github.com/khanhnhanbk/HK231_CNPM into DuqBE
+
+commit 9cab41ba4e0b817198dc9eafcb52ccfb1530f3bd
+Merge: 8d36deb 40f3290
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Sat Dec 9 09:10:24 2023 +0700
+
+    Merge branch 'DuqBE' of https://github.com/khanhnhanbk/HK231_CNPM into DuqBE
+
+commit 4b0647ec04ea2d1d9e717de809a399885dfac55a
+Merge: b63981f 40f3290
+Author: Nguyễn Văn Khánh Nhân <75458182+khanhnhanbk@users.noreply.github.com>
+Date:   Sat Dec 9 09:09:37 2023 +0700
+
+    Merge pull request #3 from khanhnhanbk/DuqBE
+    
+    Duq be
+
+commit 40f32901f53ba9c42c8b67fe02a71ddb6d5781ed
+Merge: 763016b 243dd63
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Sat Dec 9 09:07:06 2023 +0700
+
+    Merge branch 'DuqBE' of github.com:khanhnhanbk/HK231_CNPM into DuqBE
+
+commit 763016b735801db6adc33bed77e2d59324af68ae
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Fri Dec 8 11:06:32 2023 +0700
+
+    Add routes before login + adjust page before login
+
+commit 4d9039483f759c013f973c589ab7dda19dc78197
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Mon Dec 4 16:46:21 2023 +0700
+
+    add react- drag file
+
+commit e5bf8a5b448804b489f7be5f127db143e24a7026
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Sat Dec 9 08:46:55 2023 +0700
+
+    Add PrintingSPSORequest component and update
+    status in printRequest.controller
+
+commit e48894375e57ec4b9c3d935f1bc2eb053dd269b8
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Wed Dec 6 16:51:35 2023 +0700
+
+    edit and detail page
+
+commit d6f115cc2ecab6ef3399e1a646b9ac0962923070
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Mon Dec 4 16:36:23 2023 +0700
+
+    Add SPSO menu item and routes
+
+commit 5cdd875fbf6559d7ceb84eff52f74ccad8211faf
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Mon Dec 4 15:42:26 2023 +0700
+
+    upload file
+
+commit 5bcf677a63fcc12e72bab03891da8c090189e0e0
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Sun Dec 3 22:23:14 2023 +0700
+
+    page for requests
+
+commit 2856d68075ffe97c293a3009b0ff103a2ce36d3b
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Wed Nov 29 09:00:53 2023 +0700
+
+    add balance
+
+commit 8d36deba5cf0d422c4712f7799b3b0610722b687
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Sat Dec 9 08:56:31 2023 +0700
+
+    file types
+
+commit 243dd63587881835dd93d151c12de2227afba6dd
+Merge: 2f0e1c0 c7cfe85
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Sat Dec 9 08:47:00 2023 +0700
+
+    Merge branch 'DuqBE' of github.com:khanhnhanbk/HK231_CNPM into DuqBE
+
+commit 2f0e1c0e4e471c631b613155ee0b424567839e9f
+Author: khanhnhanbk <nhanhoa21012002@gmail.com>
+Date:   Sat Dec 9 08:46:55 2023 +0700
+
+    Add PrintingSPSORequest component and update
+    status in printRequest.controller
+
+commit 1b7c09525c439c171938374ca46b11e40107915d
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Fri Dec 8 21:57:45 2023 +0700
+
+    add some font-end in the detail and config req
+
+commit c7cfe858ef2ec605445035ce8dcf5a664dd7be74
+Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
+Date:   Fri Dec 8 11:06:32 2023 +0700
+
+    Add routes before login + adjust page before login
+
 commit 0b62f8712ba8b44cd4b63d522fdba8a6f8170432
 Merge: 6f877d0 8daaa7c
 Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
@@ -47,6 +158,15 @@ Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
 Date:   Wed Nov 29 09:00:53 2023 +0700
 
     add balance
+
+commit b63981fde16eb7f6cfc7763ea309848c505cff60
+Merge: b28f0c8 9957043
+Author: Nguyễn Văn Khánh Nhân <75458182+khanhnhanbk@users.noreply.github.com>
+Date:   Sat Nov 25 14:58:19 2023 +0700
+
+    Merge pull request #1 from khanhnhanbk/landingPage
+    
+    Landing page
 
 commit 995704370f64b708fbc2c61c3af5da25705b62c2
 Author: TDung <91122031+dungnguyen73@users.noreply.github.com>
